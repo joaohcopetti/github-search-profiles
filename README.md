@@ -1,7 +1,7 @@
-# Github API Interaction
+# Github API 
 
 ## 🛠️  Tools
-- Vue 3 (script setup).
+- Vue 3.
 - Vite
 - TypeScript
 - Pinia for Toast Notifications.
