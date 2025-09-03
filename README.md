@@ -10,7 +10,7 @@
 - Eslint and Prettier.
 
 ## 🔍 Preview
-GitHub Pages: https://joaohamerski.github.io/github-api/
+GitHub Pages: https://joaohcopetti.github.io/github-api/
 
 ### Dark theme
 ![Página inicial com tema escuro](https://github.com/JoaoHamerski/github-api/assets/32890601/6b81b79d-f548-4a5b-9c87-c183b9844f4b)
