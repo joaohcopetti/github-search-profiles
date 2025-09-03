@@ -7,7 +7,7 @@
       />
     </div>
     <div class="md:text-2xl text-center mt-5">
-      <h4>Digite um nome de usuário. Ex.: <b>JoaoHamerski</b></h4>
+      <h4>Digite um nome de usuário. Ex.: <b>JoaoHCopetti</b></h4>
     </div>
   </div>
 </template>
