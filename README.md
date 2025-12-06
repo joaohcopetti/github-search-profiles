@@ -13,6 +13,8 @@
 GitHub Pages: https://joaohcopetti.github.io/github-api/
 
 ### Dark theme
-![Página inicial com tema escuro](https://github.com/JoaoHCopetti/github-api/assets/32890601/6b81b79d-f548-4a5b-9c87-c183b9844f4b)
+<img width="1920" height="903" alt="Página inicial com tema escuro" src="https://github.com/user-attachments/assets/2dff3a58-233d-4377-8239-4696ccf27444" />
+
 ### Light theme
-![Página inicial com tema claro](https://github.com/JoaoHCopetti/github-api/assets/32890601/2d1e7f12-b302-4b00-b3b5-ba0ab5fab83b)
+<img width="1920" height="937" alt="Página inicial com tema claro" src="https://github.com/user-attachments/assets/20b19b91-bf8a-409e-a21d-64bc8de1fe90" />
+
