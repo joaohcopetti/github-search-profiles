@@ -5,7 +5,7 @@ on:
     branches: [main]
     
 env:
-  VITE_BASE_PATH: "/github"
+  VITE_BASE_PATH: "/github-api"
 
 jobs:
   build-and-deploy:
