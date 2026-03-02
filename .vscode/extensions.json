@@ -3,7 +3,6 @@
     "dbaeumer.vscode-eslint",
     "csstools.postcss",
     "vue.volar",
-    "esbenp.prettier-vscode",
     "editorconfig.editorconfig",
   ]
 }
