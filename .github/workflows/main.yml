@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+  
+on:
+  push: 
+    branches: [main]
+    
+env:
+  VITE_BASE_PATH: "/github"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Build project
+        run: |
+          npm install
+          npm run build
+      
+      - name: Config Actions bot
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Deploy to GitHub pages
+        run: |
+          cd dist
+          git init
+          git add -A
+          git commit -m "Deploy"
+          git branch -M main
+          git push -f https://JoaoHCopetti:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/JoaoHCopetti/github-api.git main:gh-pages
