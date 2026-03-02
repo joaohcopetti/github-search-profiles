@@ -6,7 +6,7 @@ A simple web interface that communicates with GitHub API to search for GitHub pr
 - Vue 3
 - Strongly typed with TypeScript
 - Zero dependency toast notifications
-- Tailwind CSS with DaiyUI
+- Tailwind CSS with DaisyUI
 
 ## 🔍 Preview
 GitHub Pages: https://joaohcopetti.github.io/github-search-api/
