@@ -37,4 +37,4 @@ jobs:
           git add -A
           git commit -m "Deploy"
           git branch -M main
-          git push -f https://JoaoHCopetti:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/JoaoHCopetti/github-search-api.git main:gh-pages
+          git push -f https://JoaoHammerSky:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/JoaoHammerSky/github-search-api.git main:gh-pages
