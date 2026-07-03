@@ -1,4 +1,4 @@
-# Github Search API 
+# Github Search Profiles
 
 A simple web interface that communicates with GitHub API to search for GitHub profiles and show its repositories and general info.
 
@@ -11,13 +11,8 @@ A simple web interface that communicates with GitHub API to search for GitHub pr
 ## Preview
 GitHub Pages: https://joaohcopetti.github.io/github-search-profiles/
 
-### Dark theme
-<img width="1920" height="947" alt="Screenshot 2026-06-18 at 09-49-30 GitHub API" src="https://github.com/user-attachments/assets/ae9288d6-79e7-4702-be8d-ca0695bfcfa2" />
-<img width="1920" height="947" alt="Screenshot 2026-06-18 at 09-51-23 GitHub API" src="https://github.com/user-attachments/assets/a881721a-d8ff-4151-8af2-02e7936d46d2" />
-
-### Light theme
-<img width="1920" height="947" alt="Screenshot 2026-06-18 at 09-50-54 GitHub API" src="https://github.com/user-attachments/assets/80d975c4-857d-4a99-8b6a-86ecd71c8933" />
-<img width="1920" height="947" alt="Screenshot 2026-06-18 at 09-52-29 GitHub API" src="https://github.com/user-attachments/assets/d38f9009-b0d4-447e-8512-736d14abdb71" />
+<img width="1920" height="983" alt="Screenshot 2026-07-03 at 18-09-34 GitHub API" src="https://github.com/user-attachments/assets/4446f343-6dde-46d3-a5ca-4cfb97dc9889" />
+<img width="1920" height="983" alt="Screenshot 2026-07-03 at 18-09-43 GitHub API" src="https://github.com/user-attachments/assets/edf40608-8937-4925-b7d8-40d56ddf7bb7" />
 
 ## Setup
 It uses `npm`
