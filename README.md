@@ -9,7 +9,7 @@ A simple web interface that communicates with GitHub API to search for GitHub pr
 - Tailwind CSS with DaisyUI
 
 ## Preview
-GitHub Pages: https://johnhammersky.github.io/github-search-api/
+GitHub Pages: https://joaohcopetti.github.io/github-search-profiles/
 
 ### Dark theme
 <img width="1920" height="947" alt="Screenshot 2026-06-18 at 09-49-30 GitHub API" src="https://github.com/user-attachments/assets/ae9288d6-79e7-4702-be8d-ca0695bfcfa2" />
