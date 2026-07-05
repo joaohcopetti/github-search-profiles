@@ -23,7 +23,7 @@ jobs:
       - name: Build project
         run: |
           npm install
-          npm run build
+          npm run build-only
       
       - name: Config Actions bot
         run: |
