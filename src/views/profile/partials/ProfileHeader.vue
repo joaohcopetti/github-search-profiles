@@ -16,7 +16,7 @@ defineProps<ProfileHeaderProps>()
   <div class="flex flex-col md:flex-row gap-10">
     <div class="avatar mx-auto md:mx-0">
       <div
-        class="relative w-32 rounded-full ring ring-blue-500 hover:ring-blue-600 transition-shadow ring-offset-base-100 ring-offset-2"
+        class="relative w-32 rounded-full ring-2 ring-blue-500 hover:ring-blue-600 transition-shadow ring-offset-base-100 ring-offset-2"
       >
         <a
           :href="user.html_url"
@@ -46,7 +46,7 @@ defineProps<ProfileHeaderProps>()
         </div>
       </div>
       <div
-        class="flex flex-wrap md:flex-nowrap justify-center md:justify-normal gap-8 text-xs md:text-sm py-4 md:py-4"
+        class="flex flex-wrap md:flex-nowrap justify-center md:justify-normal gap-4 md:gap-8 text-xs md:text-sm py-4 md:py-4"
       >
         <ProfileBadge
           icon="fa-solid fa-users"

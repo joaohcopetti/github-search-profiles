@@ -44,7 +44,7 @@ const onSelectChange = (event: Event) => {
   <label class="form-control w-full">
     <div
       v-if="label"
-      class="label"
+      class="label mr-2"
     >
       <span class="label-text font-bold">
         <FWIcon

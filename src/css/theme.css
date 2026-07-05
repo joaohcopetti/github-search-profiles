@@ -1,0 +1,12 @@
+:root {
+  --color-info: oklch(60% 0.16 232.661);
+  --color-warning: oklch(70% 0.189 84.429);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: oklch(45% 0.1622 266.21);
+    --color-info: oklch(80% 0.16 232.661);
+    --color-warning: oklch(85% 0.189 84.429);
+  }
+}

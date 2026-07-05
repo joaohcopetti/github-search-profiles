@@ -25,6 +25,8 @@ const toasts = computed(() => toastStore.toasts)
 </template>
 
 <style>
+@reference "@/css/main.css";
+
 .toast-move,
 .toast-enter-active,
 .toast-leave-active {

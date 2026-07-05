@@ -8,7 +8,7 @@ const loading: Ref<boolean> | undefined = inject('isSearchLoading')
 <template>
   <div class="mt-8">
     <button
-      class="btn btn-primary px-10 font-bold btn-block md:w-fit"
+      class="btn btn-primary px-10 font-bold btn-block md:w-fit rounded-lg"
       :disabled="loading"
     >
       <span

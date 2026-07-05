@@ -1,14 +1,31 @@
-@import './tailwind.css';
-@import './animate.min.css';
-@import './scrollbar.css';
+@import 'tailwindcss';
+@import 'animate.min.css';
+@import 'theme.css';
+
+@plugin 'daisyui' {
+  themes:
+    light --default,
+    dark --prefersdark;
+}
 
 :root,
 html,
 body,
 #app {
-  @apply h-full bg-gradient-to-tr dark:from-blue-900 dark:to-orange-900 from-blue-500 to-orange-500;
+  @apply h-full bg-linear-to-tr dark:from-blue-900 dark:to-orange-900 from-blue-500 to-orange-500;
 }
 
 html {
   @apply overflow-hidden;
+}
+
+@layer utilities {
+  .input,
+  .select {
+    @apply outline-none;
+  }
+
+  .btn {
+    @apply shadow-none;
+  }
 }
