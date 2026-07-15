@@ -1,0 +1,52 @@
+{
+    "pages": {
+        "home": {
+            "header": {
+                "greeting": "Enter a username"
+            },
+            "search-input": {
+                "placeholder": "Username..."
+            }
+        },
+        "profile": {
+            "header": {
+                "badges": {
+                    "followers": "Followers:",
+                    "public-repos": "Public repositories:",
+                    "register": "Registered:",
+                    "last-update": "Last updated:"
+                }
+            },
+            "options": {
+                "sort-by": "Sort by",
+                "sort-by-options": {
+                    "full_name": "Name",
+                    "created": "Created date",
+                    "pushed": "Last commit"
+                },
+                "hide-forks": "Hide forks",
+                "no-public-forks": "This user has no public forks",
+                "hide-archived": "Hide archived",
+                "no-public-archived": "This user has no public archived repositories"
+            },
+            "repos": {
+                "no-public-repo": "No public repositories",
+                "copy-ssh": "Copy SSH",
+                "copy-http": "Copy HTTP URL",
+                "copy-success-feedback": "Repository copied to clipboard",
+                "fork-repo": "Fork of another repository",
+                "created": "Created: ",
+                "last-commit": "Last commit: ",
+                "archived": "Archived"
+            }
+        }
+    },
+    "toast": {
+        "generic-error": "Oops! Something went wrong."
+    },
+    "general": {
+        "eg": "E.g.:",
+        "search": "search",
+        "back": "back"
+    }
+}

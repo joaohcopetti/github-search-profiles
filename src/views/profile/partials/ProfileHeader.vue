@@ -4,12 +4,15 @@ import { formatNumber } from '@/formatters/format-number'
 import { formatDateTime } from '@/formatters/format-datetime'
 
 import ProfileBadge from './ProfileBadge.vue'
+import { useTypedI18n } from '@/locales/i18n.js'
 
 interface ProfileHeaderProps {
   user: User
 }
 
 defineProps<ProfileHeaderProps>()
+
+const { t } = useTypedI18n()
 </script>
 
 <template>
@@ -50,24 +53,24 @@ defineProps<ProfileHeaderProps>()
       >
         <ProfileBadge
           icon="fa-solid fa-users"
-          label="Seguidores:"
+          :label="t('pages.profile.header.badges.followers')"
           :text="formatNumber(user.followers, { notation: 'compact' })"
         />
 
         <ProfileBadge
           icon="fa-solid fa-folder-open"
-          label="Repositórios públicos:"
+          :label="t('pages.profile.header.badges.public-repos')"
           :text="formatNumber(user.public_repos)"
         />
 
         <ProfileBadge
-          label="Cadastro:"
+          :label="t('pages.profile.header.badges.register')"
           icon="fa-solid fa-calendar-days"
           :text="formatDateTime(user.created_at).toRelative()!"
         />
 
         <ProfileBadge
-          label="Última atualização:"
+          :label="t('pages.profile.header.badges.last-update')"
           icon="fa-solid fa-calendar-days"
           :text="formatDateTime(user.updated_at).toRelative()!"
         />

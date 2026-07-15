@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { useTypedI18n } from '@/locales/i18n'
 import { ref } from 'vue'
 
+const { t } = useTypedI18n()
 const emit = defineEmits(['update:modelValue'])
 
 defineProps({
@@ -30,7 +32,7 @@ defineExpose({ focus })
     ref="input"
     :value="modelValue"
     type="text"
-    placeholder="Nome de usuário..."
+    :placeholder="t('pages.home.search-input.placeholder')"
     class="input input-bordered w-full md:input-lg rounded-lg"
     name="username"
     @input="onInput"

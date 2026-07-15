@@ -15,10 +15,13 @@ import ProfileRepos from './partials/ProfileRepos.vue'
 import ProfileBack from './partials/ProfileBack.vue'
 import ProfileOptions from './partials/ProfileOptions.vue'
 import ProfileContainer from './partials/ProfileContainer.vue'
+import { useTypedI18n } from '@/locales/i18n.js'
 
 interface TheProfileProps {
   user: User
 }
+
+const { t } = useTypedI18n()
 
 const toast = useToastStore()
 const emit = defineEmits(['back'])
@@ -81,7 +84,7 @@ const fetchData = async (params: RepoParams = {}) => {
   } catch (error) {
     if (error instanceof Error) {
       onBackClick()
-      toast.error('Ops! Algo deu errado.')
+      toast.error(t('toast.generic-error'))
     }
   }
 

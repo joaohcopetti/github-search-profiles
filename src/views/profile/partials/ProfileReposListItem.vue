@@ -5,6 +5,7 @@ import { formatDateTime } from '@/formatters/format-datetime'
 import { computed } from 'vue'
 import type { DropdownItem } from '@/components/AppDropdown.vue'
 import { copyToClipboard } from '@/utils/general'
+import { useTypedI18n } from '@/locales/i18n'
 
 interface ProfileReposListItemProps {
   repo: Repository
@@ -12,23 +13,24 @@ interface ProfileReposListItemProps {
 
 const props = defineProps<ProfileReposListItemProps>()
 
+const { t } = useTypedI18n()
 const dropdownItems = computed<DropdownItem[]>(() => [
   {
-    label: 'Copiar SSH',
+    label: t('pages.profile.repos.copy-ssh'),
     icon: 'far fa-copy',
     onClick: () =>
       copyToClipboard(
         props.repo.ssh_url,
-        'Repositório copiado para área de transferência',
+        t('pages.profile.repos.copy-success-feedback'),
       ),
   },
   {
-    label: 'Copiar HTTP URL',
+    label: t('pages.profile.repos.copy-http'),
     icon: 'far fa-copy',
     onClick: () =>
       copyToClipboard(
         props.repo.clone_url,
-        'Repositório copiado para área de transferência',
+        t('pages.profile.repos.copy-success-feedback'),
       ),
   },
 ])
@@ -53,7 +55,7 @@ const dropdownItems = computed<DropdownItem[]>(() => [
           v-show="repo.fork"
           :key="repo.id"
           class="tooltip tooltip-right"
-          data-tip="Fork de outro repositório"
+          :data-tip="t('pages.profile.repos.fork-repo')"
         >
           <FWIcon icon="fa-solid fa-code-fork" />
         </span>
@@ -66,19 +68,19 @@ const dropdownItems = computed<DropdownItem[]>(() => [
       </div>
     </div>
 
-    <div class="text-sm mb-2 break-words">
+    <div class="text-sm mb-2 wrap-break-word">
       {{ repo.description }}
     </div>
 
     <div class="flex flex-col md:flex-row justify-between">
       <div class="flex flex-col md:flex-row text-xs mb-5 md:mb-0">
         <span>
-          <b>Criado </b>
+          <b>{{ t('pages.profile.repos.created') }}</b>
           <span>{{ formatDateTime(repo.created_at).toRelative() }}</span>
         </span>
         <span class="mx-2 hidden md:block">&bull;</span>
         <span>
-          <b>Último commit: </b>
+          <b>{{ t('pages.profile.repos.last-commit') }}</b>
           <span>{{ formatDateTime(repo.pushed_at).toRelative() }}</span>
         </span>
       </div>
@@ -87,7 +89,7 @@ const dropdownItems = computed<DropdownItem[]>(() => [
         <AppBadge
           v-if="repo.archived"
           class="badge-warning"
-          label="Arquivado"
+          :label="t('pages.profile.repos.archived')"
         />
 
         <AppBadge

@@ -2,6 +2,7 @@ import type { App } from 'vue'
 import { createPinia } from 'pinia'
 import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { i18n } from './locales/i18n'
 
 export default class Bootstrap {
   protected app
@@ -43,6 +44,12 @@ export default class Bootstrap {
 
       this.app.component(componentName, definition.default)
     })
+
+    return this
+  }
+
+  addI18n() {
+    this.app.use(i18n)
 
     return this
   }

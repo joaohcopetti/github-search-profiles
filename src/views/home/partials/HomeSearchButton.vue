@@ -1,14 +1,17 @@
 <script setup lang="ts">
+import { useTypedI18n } from '@/locales/i18n'
 import { inject } from 'vue'
 import type { Ref } from 'vue'
 
 const loading: Ref<boolean> | undefined = inject('isSearchLoading')
+
+const { t } = useTypedI18n()
 </script>
 
 <template>
   <div class="mt-8">
     <button
-      class="btn btn-primary px-10 font-bold btn-block md:w-fit rounded-lg"
+      class="btn btn-primary px-10 font-bold btn-block md:w-fit rounded-lg uppercase"
       :disabled="loading"
     >
       <span
@@ -19,7 +22,7 @@ const loading: Ref<boolean> | undefined = inject('isSearchLoading')
         v-else
         icon="fa-solid fa-search"
       />
-      BUSCAR
+      {{ t('general.search') }}
     </button>
   </div>
 </template>

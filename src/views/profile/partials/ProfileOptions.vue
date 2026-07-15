@@ -8,20 +8,29 @@ import type {
 import { computed, ref } from 'vue'
 
 import type { AppSelectOption } from '@/components/AppSelect.vue'
+import { useTypedI18n } from '@/locales/i18n'
 
 type ProfileReposOptionsProps = {
   repos: Repository[]
   options: ReposOptions
 }
 
+const { t } = useTypedI18n()
+
 const emit = defineEmits(['update:options'])
 
 const props = defineProps<ProfileReposOptionsProps>()
 
 const selectOptions = ref<AppSelectOption[]>([
-  { label: 'Nome', value: 'full_name' },
-  { label: 'Data de cadastro', value: 'created' },
-  { label: 'Último commit', value: 'pushed' },
+  {
+    label: t('pages.profile.options.sort-by-options.full_name'),
+    value: 'full_name',
+  },
+  {
+    label: t('pages.profile.options.sort-by-options.created'),
+    value: 'created',
+  },
+  { label: t('pages.profile.options.sort-by-options.pushed'), value: 'pushed' },
 ])
 
 const onOptionsChange = ({ option, value }: ReposOption) => {
@@ -44,7 +53,7 @@ const archivedCount = computed<number>(
         :value-model="options.sort"
         :options="selectOptions"
         label-icon="fas fa-sort"
-        label="Ordenar por"
+        :label="t('pages.profile.options.sort-by')"
         size="sm"
         @change="
           (value: ReposSort) => onOptionsChange({ option: 'sort', value })
@@ -55,9 +64,12 @@ const archivedCount = computed<number>(
       <AppToggle
         class="mb-3"
         :model-value="options.hideForks"
-        :label="'Ocultar forks' + (forksCount ? ` (${forksCount})` : '')"
+        :label="
+          t('pages.profile.options.hide-forks') +
+          (forksCount ? ` (${forksCount})` : '')
+        "
         :disabled="!forksCount"
-        disabled-message="Este usuário não possui forks públicos"
+        :disabled-message="t('pages.profile.options.no-public-forks')"
         @toggle="
           (value: boolean) => onOptionsChange({ option: 'hideForks', value })
         "
@@ -66,10 +78,11 @@ const archivedCount = computed<number>(
       <AppToggle
         :model-value="options.hideArchived"
         :label="
-          'Ocultar arquivados' + (archivedCount ? ` (${archivedCount})` : '')
+          t('pages.profile.options.hide-archived') +
+          (archivedCount ? ` (${archivedCount})` : '')
         "
         :disabled="!archivedCount"
-        disabled-message="Este usuário não possui repositórios arquivados públicos"
+        :disabled-message="t('pages.profile.options.no-public-archived')"
         @toggle="
           (value: boolean) => onOptionsChange({ option: 'hideArchived', value })
         "

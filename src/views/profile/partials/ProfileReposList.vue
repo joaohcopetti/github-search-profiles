@@ -2,12 +2,15 @@
 import type { Repository } from '@/types/profile'
 import ProfileReposListItem from './ProfileReposListItem.vue'
 import { computed } from 'vue'
+import { useTypedI18n } from '@/locales/i18n.js'
 
 interface ProfileReposListProps {
   repos: Repository[]
 }
 
 const props = defineProps<ProfileReposListProps>()
+
+const { t } = useTypedI18n()
 
 const hasRepos = computed(() => props.repos.length)
 </script>
@@ -27,7 +30,7 @@ const hasRepos = computed(() => props.repos.length)
           icon="fa-regular fa-folder-open"
         />
       </div>
-      <div>Nenhum repositório público</div>
+      <div>{{ t('pages.profile.repos.no-public-repo') }}</div>
     </li>
     <template
       v-for="repo in repos"

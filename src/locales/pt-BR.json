@@ -1,0 +1,52 @@
+{
+    "pages": {
+        "home": {
+            "header": {
+                "greeting": "Digite um nome de usuário"
+            },
+            "search-input": {
+                "placeholder": "Nome de usuário..."
+            }
+        },
+        "profile": {
+            "header": {
+                "badges": {
+                    "followers": "Seguidores:",
+                    "public-repos": "Repositórios públicos:",
+                    "register": "Cadastro:",
+                    "last-update": "Última atualização:"
+                }
+            },
+            "options": {
+                "sort-by": "Ordenar por",
+                "sort-by-options": {
+                    "full_name": "Nome",
+                    "created": "Data de cadastro",
+                    "pushed": "Último commit"
+                },
+                "hide-forks": "Ocultar forks",
+                "no-public-forks": "Este usuário não possui forks públicos",
+                "hide-archived": "Ocultar arquivados",
+                "no-public-archived": "Este usuário não possui repositórios arquivados públicos"
+            },
+            "repos": {
+                "no-public-repo": "Nenhum repositório público",
+                "copy-ssh": "Copiar SSH",
+                "copy-http": "Copiar HTTP URL",
+                "copy-success-feedback": "Repositório copiado para área de transferência",
+                "fork-repo": "Fork de outro repositório",
+                "created": "Criado: ",
+                "last-commit": "Último commit: ",
+                "archived": "Arquivado"
+            }
+        }
+    },
+    "toast": {
+        "generic-error": "Ops! Algo deu errado."
+    },
+    "general": {
+        "eg": "Ex.:",
+        "search": "buscar",
+        "back": "voltar"
+    }
+}

@@ -14,5 +14,6 @@ bootstrap
     .addGlobalComponents()
     .addAutoAnimate()
     .addFontAwesome()
+    .addI18n()
 
 app.mount('#app')

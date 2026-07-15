@@ -13,7 +13,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "typesafe-i18n": "typesafe-i18n"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.1",
@@ -28,7 +29,9 @@
     "lodash-es": "^4.17.21",
     "luxon": "^3.4.4",
     "pinia": "^2.1.7",
-    "vue": "^3.3.11"
+    "typesafe-i18n": "^5.27.1",
+    "vue": "^3.3.11",
+    "vue-i18n": "^11.4.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.6.1",

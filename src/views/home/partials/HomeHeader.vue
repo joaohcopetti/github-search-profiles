@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useTypedI18n } from '@/locales/i18n'
+
+const { t } = useTypedI18n()
+</script>
+
 <template>
   <div>
     <div class="flex justify-center">
@@ -7,7 +13,10 @@
       />
     </div>
     <div class="md:text-2xl text-center mt-5">
-      <h4>Digite um nome de usuário. Ex.: <b>vuejs</b></h4>
+      <h4>
+        {{ t('pages.home.header.greeting') }}. {{ t('general.eg') }}
+        <b>vuejs</b>
+      </h4>
     </div>
   </div>
 </template>

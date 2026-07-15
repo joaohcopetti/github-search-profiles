@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { useTypedI18n } from '@/locales/i18n'
+
 defineEmits(['back'])
+
+const { t } = useTypedI18n()
 </script>
 
 <template>
@@ -13,7 +17,7 @@ defineEmits(['back'])
         size="lg"
         class="mr-1"
       />
-      <span>VOLTAR</span>
+      <span class="uppercase">{{ t('general.back') }}</span>
     </button>
   </div>
 </template>
