@@ -6,7 +6,7 @@ export type MessageSchema = typeof ptBR
 
 export const i18n = createI18n<[MessageSchema], 'en-US' | 'pt-BR'>({
   legacy: false,
-  locale: 'en-US',
+  locale: navigator.language || 'en-US',
   messages: {
     'en-US': enUS,
     'pt-BR': ptBR,
